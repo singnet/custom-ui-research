@@ -166,7 +166,7 @@ class App extends Component {
                         <div>
                           {Parser(this.state.utf8Content ? this.state.utf8Content : "")}
                         </div>
-                    
+
                         {/* 
                         Another thing that would work here is this:
                           <div dangerouslySetInnerHTML={{ __html: this.state.utf8Content }}> </div>
