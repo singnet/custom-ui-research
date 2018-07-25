@@ -44,7 +44,7 @@ class HashForm extends React.Component {
   }
 }
 
-class App extends Component {
+class Manual extends Component {
   constructor(props) {
     super(props)
 
@@ -136,7 +136,7 @@ class App extends Component {
         <main className="container">
           <div className="pure-g">
             <div className="pure-u-1-1">
-              <h1>Testing IPFS Integration</h1>
+              <h1>Testing IPFS Integration -</h1>
             </div>
             <div className="pure-u-1-1">
               <HashForm onHashFormChange={this.handleTextBoxChange} onHashFormSubmit={this.handleTextBoxSubmit}></HashForm>
@@ -145,6 +145,42 @@ class App extends Component {
               <div>
                 <div className="pure-g">
                   <div className="pure-u-1-2">
+                    <iframe id="Raw_iFrame" width="100%" height="750" ref={(f) => { this.rawIframe = f; }} />
+                  </div>
+                  <div className="pure-u-1-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    );
+  }
+}
+
+class LevFrame extends Component {
+    componentDidMount() {
+        // this.frameRef.onload
+    }
+
+    shouldComponentUpdate() {
+        return false;
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('message', this.frameLambda);
+    }
+
+    frameLambda = (event) => {
+        
+    }
+}
+
+export default Manual
+
+/*
+
                     <Frame
                       initialContent='<!DOCTYPE html><html><head></head><body><h1>Raw UTF8 Content</h1><div id="mountHere"></div></body></html>'
                       mountTarget='#mountHere'
@@ -158,8 +194,7 @@ class App extends Component {
                         </pre>
                         
                     </Frame>
-                  </div>
-                  <div className="pure-u-1-2">
+
                     <Frame
                       initialContent='<!DOCTYPE html><html><head></head><body><h1>Custom UI</h1><div id="mountHere"></div></body></html>'
                       mountTarget='#mountHere'
@@ -171,55 +206,9 @@ class App extends Component {
                         <div>
                           {Parser(this.state.utf8Content ? this.state.utf8Content : "")}
                         </div>
-
-                        {/* 
-                        Another thing that would work here is this:
-                          <div dangerouslySetInnerHTML={{ __html: this.state.utf8Content }}> </div>
-
-                        The main difference is that "dangerouslySetInnerHTML" would not update the react-dom whereas the Parser
-                        approach does. Another thing is that "dangerously" means it does not sanitize the input.
-                        */}
                     </Frame>
 
-                    <iframe id="yt_iFrame" width="560" height="315" src="https://www.youtube.com/embed/x7cQ3mrcKaY" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen sandbox="allow-presentation allow-scripts allow-same-origin"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-      </div>
-    );
-  }
-}
-
-export default App
 
 
-/*
 
-                <br/>
-                <img src={"https://gateway.ipfs.io/ipfs/" + this.state.ipfsHash}/>
-                <br/>
-
-                <Frame
-                  styleSheets={['frame1.css']}
-                  css={'body{background-color:#eee;}'}>
-
-                  <Fragment>
-                    Hello!
-                  </Fragment>
-                  <div className="title">
-                    Parturient Ipsum Cursus Purus Justo
-                  </div>
-                </Frame>
-
-                <IFrame dangerouslySetInnerHTML={{ __html: this.state.utf8Content}} url=""
-                  width="450px"
-                  height="450px"
-                  id="myId"
-                  className="myClassname"
-                  display="initial"
-                  position="relative"
-                  allowFullScreen/>
-*/
+ */

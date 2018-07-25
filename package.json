@@ -15,7 +15,6 @@
     "cross-spawn": "4.0.2",
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
-    "dotenv": "2.0.0",
     "eslint": "3.8.1",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -54,9 +53,8 @@
     "ipfs-api": "^22.2.4",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-frame": "^2.1.0",
-    "react-frame-component": "^4.0.0",
-    "react-iframe": "^1.2.0"
+    "react-frame-component": "^4.0.1",
+    "react-router": "^4.3.1"
   },
   "scripts": {
     "start": "node scripts/start.js",
