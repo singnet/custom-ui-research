@@ -38,6 +38,9 @@ The SingularityNET network allows developers to register their AI services on an
 - test whether custom elements defined in parent still work in iframe
 - use shadow dom on custom elements in order to force styling on our custom elements
    - the shadow dom can be opened/hacked around but the idea is that if our custom elements are styled in a certain way, UI developers will try to match those styles
+   
+## Questions
+1. Given that metamask only works in Chrome (+ opera,brave) and has limited support for Firefox, how much do we care about IE and Safari compatibility from day 1?
 
 ## Links
 1. [WHATWG HTML Custom Elements Spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements)
