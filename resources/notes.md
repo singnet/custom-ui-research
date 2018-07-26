@@ -42,7 +42,9 @@ The SingularityNET network allows developers to register their AI services on an
 ## Links
 1. [WHATWG HTML Custom Elements Spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements)
    * required naming convention
-   * must call `window.customElements.define()` or else custom element behaves as a span
+   * must call `window.customElements.define()` or else custom element behaves as a span]
+   * https://developers.google.com/web/fundamentals/web-components/customelements#historysupport
+   * chrome and safari implemented and enabled by default, firefox implemented but not enabled, edge is prototyping
 1. Quip doing something similar
    * https://quip.com/blog/quip-engineering-live-apps-platform
    * https://quip.com/blog/quip-engineering-live-apps-platform-pt2
