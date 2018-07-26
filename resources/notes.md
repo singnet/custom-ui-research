@@ -28,6 +28,13 @@ The SingularityNET network allows developers to register their AI services on an
 
 ## PoCs
 1. Parent window cannot write (or access) child cross-origin iframe [jsfiddle](https://jsfiddle.net/appleyard/yph8o3x0/)
+1. Simple window.postMessage demo, communication between iframes [jsfiddle](https://google.com)
+
+
+## Temp
+- test whether custom elements defined in parent still work in iframe
+- use shadow dom on custom elements in order to force styling on our custom elements
+   - the shadow dom can be opened/hacked around but the idea is that if our custom elements are styled in a certain way, UI developers will try to match those styles
 
 ## Links
 1. [WHATWG HTML Custom Elements Spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements)
