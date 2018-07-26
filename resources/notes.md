@@ -29,7 +29,7 @@ The SingularityNET network allows developers to register their AI services on an
 
 ## PoCs
 1. Parent window cannot write (or access) child cross-origin iframe [jsfiddle](https://jsfiddle.net/appleyard/yph8o3x0/)
-1. Custom Elements demo [jsfiddle](https://jsfiddle.net/appleyard/m2syf4zj/44/)
+1. Custom Elements demo [jsfiddle](https://jsfiddle.net/appleyard/m2syf4zj/)
    1. Not implemented in Firefox or IE yet but polyfill available from webcomponents.org
 1. Simple window.postMessage demo, communication between iframes [jsfiddle](https://google.com)
 
