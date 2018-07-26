@@ -26,6 +26,9 @@ The SingularityNET network allows developers to register their AI services on an
 1. Security
    1. sandboxed iframe should give us the necessary security guarantees
 
+## PoCs
+1. Parent window cannot write (or access) child cross-origin iframe [jsfiddle](https://jsfiddle.net/appleyard/yph8o3x0/)
+
 ## Links
 1. [WHATWG HTML Custom Elements Spec](https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements)
    * required naming convention
