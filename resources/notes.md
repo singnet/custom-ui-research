@@ -21,6 +21,7 @@ The SingularityNET network allows developers to register their AI services on an
    1. Option 1: Allow service developers to Do Whatever They Want™
    1. Option 2: Provide service developers with a CSS stylesheet to match the surrounding Dapp.
    1. Option 3: Provide service developers with Custom Elements to use for various options
+      * demo below
    1. Option 4: Allow only plain HTML and a specified set of Custom Elements with attributes that map to their protobuf models
    1. Option 5: Declarative Semantic UI language (loosely based on something like swagger) which allows developers to specify their UI but have no control over any layout, styling, or functionality.
 1. Security
@@ -28,6 +29,8 @@ The SingularityNET network allows developers to register their AI services on an
 
 ## PoCs
 1. Parent window cannot write (or access) child cross-origin iframe [jsfiddle](https://jsfiddle.net/appleyard/yph8o3x0/)
+1. Custom Elements demo [jsfiddle](https://jsfiddle.net/appleyard/m2syf4zj/44/)
+   1. Not implemented in Firefox or IE yet but polyfill available from webcomponents.org
 1. Simple window.postMessage demo, communication between iframes [jsfiddle](https://google.com)
 
 
