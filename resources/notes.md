@@ -32,6 +32,7 @@ The SingularityNET network allows developers to register their AI services on an
 1. Custom Elements demo [jsfiddle](https://jsfiddle.net/appleyard/m2syf4zj/)
    1. Not implemented in Firefox or IE yet but polyfill available from webcomponents.org
 1. Simple window.postMessage demo, communication between iframes [jsfiddle](https://google.com)
+1. Input elements outside of form are valid HTML5: https://imgur.com/a/HFciXEg from https://checker.html5.org/
 
 
 ## Temp
