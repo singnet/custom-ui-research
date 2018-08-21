@@ -1,0 +1,12 @@
+
+<iframe id="mf_iframe" src="http://motherfuckingwebsite.com/" width="700px" height="300px" />
+
+<script>
+const el_mf_iframe = document.querySelector("#mf_iframe");
+const mf_iframe = el_mf_iframe.contentWindow || el_mf_iframe.contentDocument.document || el_mf_iframe.contentDocument;
+mf_iframe.document.open();
+mf_iframe.document.write('Hello World!');
+mf_iframe.document.close();
+
+</script>
+
