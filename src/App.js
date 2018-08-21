@@ -94,7 +94,7 @@ class App extends Component {
   }
 
   handleTextBoxSubmit(event) {
-    console.log(this);
+    // console.log(this);
     const contract = require('truffle-contract')
     const simpleStorage = contract(SimpleStorageContract)
     simpleStorage.setProvider(this.state.web3.currentProvider)
@@ -181,7 +181,7 @@ class App extends Component {
                         */}
                     </Frame>
 
-                    <iframe id="yt_iFrame" width="560" height="315" src="https://www.youtube.com/embed/x7cQ3mrcKaY" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen sandbox="allow-presentation allow-scripts allow-same-origin"></iframe>
+                    {/* <iframe id="yt_iFrame" width="560" height="315" src="https://www.youtube.com/embed/x7cQ3mrcKaY" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen sandbox="allow-presentation allow-scripts allow-same-origin"></iframe> */}
                   </div>
                 </div>
               </div>
