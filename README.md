@@ -16,7 +16,7 @@ This repository serves as a research project exploring what is possible with saf
 
 Make sure you have node, npm, ipfs, and truffle installed.
 
-1. `git clone https://github.com/ldub/ipfs-testbed/ && cd ipfs-testbed`
+1. `git clone https://github.com/singnet/custom-ui-research/ && cd custom-ui-research`
     * clones the repo
 1. `npm install`
     * installs dependencies
