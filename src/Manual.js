@@ -71,9 +71,6 @@ class Manual extends Component {
       this.setState({
         web3: results.web3
       })
-
-      // Instantiate contract once web3 provided.
-      this.instantiateContract()
     })
     .catch(() => {
       console.log('Error finding web3.')
@@ -178,37 +175,3 @@ class LevFrame extends Component {
 }
 
 export default Manual
-
-/*
-
-                    <Frame
-                      initialContent='<!DOCTYPE html><html><head></head><body><h1>Raw UTF8 Content</h1><div id="mountHere"></div></body></html>'
-                      mountTarget='#mountHere'
-                      width="100%"
-                      height="750"
-                      id="Raw_iFrame"
-                      sandbox="allow-scripts allow-same-origin"
-                      >
-                        <pre>
-                          {this.state.utf8Content ? this.state.utf8Content : ""}
-                        </pre>
-                        
-                    </Frame>
-
-                    <Frame
-                      initialContent='<!DOCTYPE html><html><head></head><body><h1>Custom UI</h1><div id="mountHere"></div></body></html>'
-                      mountTarget='#mountHere'
-                      width="100%"
-                      height="750"
-                      id="UI_iFrame"
-                      sandbox="allow-scripts allow-same-origin"
-                      >
-                        <div>
-                          {Parser(this.state.utf8Content ? this.state.utf8Content : "")}
-                        </div>
-                    </Frame>
-
-
-
-
- */

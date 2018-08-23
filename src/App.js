@@ -71,9 +71,6 @@ class App extends Component {
       this.setState({
         web3: results.web3
       })
-
-      // Instantiate contract once web3 provided.
-      this.instantiateContract()
     })
     .catch(() => {
       console.log('Error finding web3.')
@@ -93,6 +90,14 @@ class App extends Component {
     });
   }
 
+  isKeyValid(key, msg) {
+    if (null === key || undefined === key || "" === key) {
+      alert(msg);
+      return false;
+    }
+    return true;
+  }
+
   handleTextBoxSubmit(event) {
     // console.log(this);
     const contract = require('truffle-contract')
@@ -105,23 +110,31 @@ class App extends Component {
     // Get accounts.
     this.state.web3.eth.getAccounts((error, accounts) => {
       simpleStorage.deployed().then((instance) => {
-        simpleStorageInstance = instance
+        if (this.isKeyValid(this.state.keyToGet, "Please enter a key")) {
+          simpleStorageInstance = instance
 
-        // Get the value from the contract to prove it worked.
-        return simpleStorageInstance.get.call(this.state.keyToGet)
+          // Get the value from the contract to prove it worked.
+          return simpleStorageInstance.get.call(this.state.keyToGet)
+        }
+
+        return Promise.reject();
       }).then((result) => {
-        console.log("before ipfs");
-        console.log(result);
+        if (this.isKeyValid(result, "No such key found in SimpleStorage!")) {
+          console.log('retrieving ' + result + ' from IPFS')
 
-        this.state.ipfs.files.cat(result, (err, file) => {
-          if (err) {
-            console.log(err);
-          } else {
-            const utf8 = file.toString('utf8');
-            const base64 = file.toString('base64');
-            this.setState({ipfsHash: result, utf8Content: utf8, base64Content: base64});
-          }
-        });
+          this.state.ipfs.files.cat(result, (err, file) => {
+            if (err) {
+              console.log(err);
+            } else {
+              const utf8 = file.toString('utf8');
+              const base64 = file.toString('base64');
+              this.setState({ipfsHash: result, utf8Content: utf8, base64Content: base64});
+              console.log('done retrieving ' + result + ' from IPFS')
+            }
+          });
+        } else {
+          return Promise.reject();
+        }
       })
     })
   }
@@ -131,6 +144,7 @@ class App extends Component {
       <div className="App">
         <nav className="navbar pure-menu pure-menu-horizontal">
             <a href="#" className="pure-menu-heading pure-menu-link">Lev's IPFS Testbed</a>
+            <a className="pure-menu-heading pure-menu-link" href="//github.com/ldub/ipfs-testbed">[github]</a>
         </nav>
 
         <main className="container">
@@ -180,8 +194,6 @@ class App extends Component {
                         approach does. Another thing is that "dangerously" means it does not sanitize the input.
                         */}
                     </Frame>
-
-                    {/* <iframe id="yt_iFrame" width="560" height="315" src="https://www.youtube.com/embed/x7cQ3mrcKaY" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen sandbox="allow-presentation allow-scripts allow-same-origin"></iframe> */}
                   </div>
                 </div>
               </div>

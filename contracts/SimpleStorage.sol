@@ -4,7 +4,7 @@ contract SimpleStorage {
   mapping (string => string) data;
 
   constructor() public {
-    data["airedale"] = "QmaihwPvwNqjhf3diAz5aMVP4fEKMx7ks357hjVi82i6Vs";
+    data["airedale"] = "QmSj6BSHYpPBLxVDdUKXwUZyRMmnxksR2NZXaqUWRB4Wjd";
 
     data["readme"] = "QmPZ9gcCEpqKTo6aq61g2nXGUhM4iCL3ewB6LDXZCtioEB"; 
 
